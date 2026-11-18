@@ -1,124 +1,138 @@
-# 🏎️ NFSU2 Career Save Editor (25 Car Slots Edition)
+# 🏎️ Need for Speed: Underground 2 Career Save Editor
+
+### Extended 25 Car Slots Edition &bull; Full Dyno &bull; Electric Purple HUD
 
 <p align="center">
-  <img src="https://img.shields.io/badge/NFSU2-Save%20Editor-9d4edd?style=for-the-badge&logo=speedtest&logoColor=white" alt="NFSU2 Editor">
-  <img src="https://img.shields.io/badge/Slots-25%20Car%20Slots-a855f7?style=for-the-badge" alt="25 Slots">
-  <img src="https://img.shields.io/badge/Theme-Electric%20Purple-b388ff?style=for-the-badge" alt="Electric Purple">
-  <img src="https://img.shields.io/badge/Privacy-100%25%20Client--Side-green?style=for-the-badge" alt="Client-Side">
+  <img src="https://img.shields.io/badge/NFSU2-Save%20Editor-9d4edd?style=for-the-badge&logo=speedtest&logoColor=white" alt="NFSU2 Save Editor">
+  <img src="https://img.shields.io/badge/Slots-25%20Car%20Slots%20Supported-a855f7?style=for-the-badge" alt="25 Car Slots">
+  <img src="https://img.shields.io/badge/Theme-Electric%20Purple%20HUD-b388ff?style=for-the-badge" alt="Electric Purple Theme">
+  <img src="https://img.shields.io/badge/Privacy-100%25%20Client--Side-10b981?style=for-the-badge" alt="100% Client-Side">
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License">
 </p>
 
 <p align="center">
-  <strong>เว็บเครื่องมือแก้ไขเซฟเกม Need for Speed: Underground 2 แบบครบวงจร</strong><br>
-  ทำงานในเบราว์เซอร์ 100% ปลอดภัย ไม่ต้องอัปโหลดไฟล์ขึ้นเซิร์ฟเวอร์ พร้อมระบบขยายโรงรถ 25 ช่อง (25 Car Slots) และธีมสีม่วงนีออนสุดเท่!
+  <strong>A modern, zero-dependency browser-based save game editor for Need for Speed: Underground 2.</strong><br>
+  Runs 100% locally in your browser. Features extended 25-car garage support, real-time dyno curve manipulation, gear ratio tuning, career stage gating, and automatic checksum recalculation.
 </p>
 
 ---
 
-## ✨ สรรพคุณและฟีเจอร์เด่น (Key Features)
+## ✨ Features & Capabilities
 
-### 🚗 1. ระบบโรงรถพิเศษ 25 ช่อง (25 Car Slots Extended Garage)
-- **รองรับสูงสุด 25 ช่องรถ**: จากปกติในโหมด Career ที่มีเพียง 5 ช่อง ขยายเป็น 25 ช่องรถเต็มรูปแบบ!
-- **รองรับ `GARAGE.DAT` Version 2 (40,712 bytes)**: เชื่อมต่อและจัดการช่องรถเสริม 6–25 แบบอัตโนมัติ เข้ากันได้กับ `nfsu2-web` (WebAssembly / WebGPU port)
-- **ปุ่มกดขยาย 25 ช่องใน 1 คลิก (+ Expand to 25 car slots)**: เซฟเก่าที่มีแค่ 5 หรือ 10 ช่อง สามารถกดขยายเป็น 25 ช่องได้ทันที
-- **สลับรถข้ามช่อง (Swap Slots)**: สลับตำแหน่งรถระหว่างช่อง 1 ถึง 25 ได้อย่างอิสระ โดยไม่ทำให้แฮนเดิลภายใน (`CAREER_SLOT_<n>`) เสียหาย
-- **เปลี่ยนและเรียกรถลงช่อง (Car Donor Roster)**: เลือกเสกรถคันใหม่เข้าช่องว่าง หรือเปลี่ยนรถคันเดิมด้วยรถที่มีในเกม รวมถึงรถทดลอง (Traffic Cars)
-- **ล็อค / ปลดล็อคช่องรถ (Lock/Unlock Slots)**: จัดการสถานะช่องรถแต่ละช่องได้อย่างอิสระ
+### 🚗 1. Extended Garage — 25 Car Slots Architecture
+* **Up to 25 Car Slots**: Expand far beyond the vanilla 5-car limit to store, configure, and race your entire dream fleet.
+* **`GARAGE.DAT` Version 2 (40,712 bytes)**: Full native support for extended garage files with 20 supplementary car records (slots 6–25) alongside the 5 career slots.
+* **1-Click 25-Slot Expansion**: Automatically upgrades standard 5-slot and 10-slot saves to 25 slots with verified `CAREER_SLOT_<n>` hash tables.
+* **Slot Swapping (Experimental)**: Safely swap vehicles between any of the 25 slots while preserving internal record handles.
+* **Car Replacement & Injection**: Replace any slot with stock donor vehicles, regional specials, or experimental traffic models.
+* **Individual Slot State Control**: Toggle slot locks, sponsor car vacancies, and bought flags independently.
 
-### ⚡ 2. ปรับแต่งรถและจูนไดโน่เต็มสูบ (Full Tuning & Dyno Tuning)
-- **อัปเกรดอะไหล่ Performance 9 หมวดหมู่**: เครื่องยนต์, เกียร์, เทอร์โบ, ไนตรัส, เบรก, ยาง, ช่วงล่าง, กล่อง ECU, ลดน้ำหนัก
-- **รองรับ Unique Parts ครบทุกชิ้น**: ใส่ของแต่งยูนีคหายากได้ทุกหมวด
-- **ปุ่มเดียวสุดตาราง (MAX OUT Button)**: กดปุ่มเดียว อัปเกรดอะไหล่แรงม้าสูงสุดและยูนีคครบทุกชิ้นทันที
-- **ปลดล็อคอะไหล่ทุกหมวด (Unlock Parts Table)**: ปลดล็อคตารางอะไหล่ของช่องนั้น ๆ ให้ใช้งานได้อิสระ
-- **กราฟ Dyno Curve Interactive**: ดึงกราฟปรับแต่งแรงบิด (Torque) ตามช่วงรอบเครื่องยนต์ (RPM) ของ ECU และ Turbo ได้อิสระ
-- **ระบบปรับอัตราทดเกียร์ (Gearing & Drivetrain)**: ปรับแต่งอัตราทดเกียร์ 1-6 และเฟืองท้าย (Final Drive) พร้อมกราฟจำลองความเร็ว
-- **ระบบจูนอัตโนมัติ (Auto-Tune Strategies)**: เลือกลักษณะการแข่ง (Drag, Drift, Sprint, Circuit, Acceleration, Top Speed) ให้ระบบคำนวณกราฟที่ดีที่สุดให้เอง
+### ⚡ 2. Performance Tuning & Dyno Suite
+* **9 Performance Categories**: Weight Reduction, Transmission, Nitrous, Engine, Turbo, Suspension, Brakes, ECU, and Tires.
+* **Unique Performance Parts**: Full support for all 9 rare unique part upgrades and inventory ownership flags.
+* **1-Click "MAX OUT"**: Instantly install top-tier parts and all unique upgrades across all categories in a single click.
+* **Interactive Dyno Graphs**: Drag-and-drop RPM torque and power curve editing for both ECU and Turbo.
+* **Drivetrain & Gear Ratio Tuning**: Real-time gearing simulation with customizable gear ratios and final drive.
+* **Auto-Tune Optimization**: Optimize dyno curves and gear ratios targeted at specific event strategies (*Acceleration, Top Speed, Drag, Drift, Sprint, Circuit*).
+* **Creator's Unlock Table**: Toggle complete part unlocks per slot to unleash restricted customization.
 
-### 💰 3. จัดการโปรไฟล์และเนื้อเรื่อง (Career & Profile Management)
-- **แก้ไขชื่อคนขับ (Driver Name)**: รองรับชื่อได้สูงสุด 31 ตัวอักษร
-- **ปรับจำนวนเงิน (Money)**: ปรับเงินในเกมได้สูงสุดถึง **$2,147,483,647**
-- **เลือก Career Stage ได้ดั่งใจ**: ปรับ Stage 0 ถึง 6 (Intro, ด่าน 1-5, จนถึง Post-Career)
-- **เปิดร้านค้าอัตโนมัติ (Discover Eligible Shops)**: ปลดล็อคและแสดงตำแหน่งร้านค้าในเมืองตาม Stage โดยไม่ทำลายประวัติการแข่ง
-- **ผ่านเนื้อเรื่อง 100% (Complete Career)**: ติ๊กภารกิจ BUN events และรูปภาพทั้งหมดให้สำเร็จสมบูรณ์
+### 💰 3. Profile & Career Progression Control
+* **Money & Bankroll**: Edit career cash up to the 32-bit maximum of **\$2,147,483,647**.
+* **Driver Name**: Change driver alias with full Latin-1 support (up to 31 characters).
+* **Career Stage Selector**: Adjust career stage from Stage 0 (Intro) through Stage 6 (Post-Career).
+* **Safe Shop Discovery**: Reveal and unlock eligible shops across the map without breaking progression triggers.
+* **100% Career Completion**: Mark all BUN career goals and photo events complete cleanly with proper event flags.
 
-### 🛡️ 4. ระบบคำนวณ Checksum อัตโนมัติ (Auto Checksum Fix)
-- **คำนวณ CRC ทั้ง 3 จุดใหม่อัตโนมัติ**: แก้ไขแล้วเซฟไม่พัง ตัวเกมโหลดติด 100% (Block A, Block B, Header CRC)
-- **คำนวณ Fingerprint ของ `GARAGE.DAT` (FNV-1a 64-bit)**: ซิงค์รหัสความถูกต้องระหว่างเซฟ Career กับไฟล์ GARAGE.DAT อัตโนมัติ ไม่ขึ้น Save Corrupt
+### 🛡️ 4. Automatic Checksum & Fingerprint Correction
+* **Three-Point CRC Recalculation**: Recalculates Block A, Block B, and Container Header CRCs on export so modified saves never report corruption.
+* **FNV-1a 64-bit Fingerprinting**: Recalculates matching 64-bit fingerprints between career saves and paired `GARAGE.DAT` files.
+* **Safe In-Memory Architecture**: Files are processed using non-destructive Uint8Array slicing.
 
-### 🟣 5. ดีไซน์ธีมใหม่ ม่วงนีออนสุดล้ำ (Electric Purple Neon Theme)
-- ปรับโทนสีปุ่ม, ไฮไลต์, แท็บ และเอฟเฟกต์โกลว์ (Purple Glow) เป็น **สีม่วงนีออนสไตล์เรซซิ่งใต้ดิน** สวยงาม คมชัด สบายตาบนพื้นหลัง Dark Mode
+### 🟣 5. Electric Purple Racing HUD Theme
+* Modern neon purple aesthetics (`#b388ff` / `#cbb0ff`) inspired by authentic street-racing underglow and dashboard telemetry.
+* Responsive, high-contrast dark theme optimized for both desktop and mobile screens.
 
-### 🔒 6. ความปลอดภัยระดับ 100% (Safe & Client-Side)
-- ประมวลผลในเบราว์เซอร์ของคุณเท่านั้น (Client-Side)
-- ไม่มีการอัปโหลดไฟล์เซฟขึ้น Server ใด ๆ ทั้งสิ้น ปลอดภัยจากไวรัสและข้อมูลรั่วไหล 100%
-
----
-
-## 🚀 วิธีการเปิดใช้งาน (How to Use)
-
-### แบบที่ 1: รันผ่านตัวเปิดในเครื่อง (เร็ว & สะดวกที่สุด)
-1. ดับเบิ้ลคลิกที่ไฟล์ **`start.bat`**
-2. ระบบจะเริ่มเซิร์ฟเวอร์ขนาดเล็กในเครื่องและเปิดเบราว์เซอร์ไปที่ `http://localhost:8080/` ให้อัตโนมัติ
-3. พร้อมใช้งานทันที!
-
-### แบบที่ 2: เปิดไฟล์ตรงผ่านเบราว์เซอร์ (ไม่ต้องมีเซิร์ฟเวอร์)
-- ดับเบิ้ลคลิกเปิดไฟล์ **`index.html`** ใน Google Chrome, Brave หรือ Edge ได้ทันที (มีระบบ Bundle ทำงาน Offline ได้ 100%)
+### 🔒 6. 100% Client-Side & Privacy-First
+* Everything executes strictly inside your browser's JavaScript engine.
+* No server uploads, no cookies, no tracking, and zero external backend requirements.
 
 ---
 
-## 📖 ขั้นตอนการแก้ไขเซฟ (Step-by-Step)
+## 🚀 Quick Start
 
 ```mermaid
 flowchart LR
-    A["1. เลือกไฟล์เซฟ<br>(.zip หรือ Career Save)"] --> B["2. แก้ไขโปรไฟล์<br>& รถ 25 ช่อง"]
-    B --> C["3. แต่งรถ / ไดโน่<br>(Tuning & Dyno)"]
-    C --> D["4. ดาวน์โหลดเซฟ<br>(Checksum แก้ให้เสร็จสรรพ)"]
+    A["1. Load Save File<br>(.zip or Career)"] --> B["2. Edit Profile &<br>25 Car Slots"]
+    B --> C["3. Performance<br>& Dyno Tuning"]
+    C --> D["4. Download<br>(Checksums Fixed)"]
 ```
 
-1. **โหลดเซฟ**: 
-   - กดปุ่ม **Choose File** ตรงหัวข้อ *Save file*
-   - เลือกไฟล์เซฟ Career (เช่น `MisterG`) หรือไฟล์แบ็คอัป `.zip` ของ nfsu2-web
-2. **แก้ไขข้อมูล**:
-   - ปรับชื่อคนขับ หรือจำนวนเงินตามต้องการ
-   - เลื่อนดูช่องรถ **Car Slot 1 ถึง 25**
-   - หากเซฟมีเพียง 5 ช่อง สามารถกด **"+ Expand to 25 car slots"** เพื่อเปิดช่องรถที่ 6-25 ได้ทันที
-3. **แต่งรถ & จูน**:
-   - กดปุ่ม **Tuning…** เพื่อเปิดหน้าต่างปรับแต่งอะไหล่, ปลดล็อคของแต่ง, หรือกด **MAX OUT**
-   - สลับไปแท็บ **DYNO** เพื่อปรับจูนกราฟรอบเครื่องหรืออัตราทดเกียร์
-4. **ดาวน์โหลด**:
-   - กดปุ่ม **Download edited save** หรือ **Download edited ZIP** ด้านล่างสุด
-   - นำไฟล์ที่ได้ไปใส่คืนในโฟลเดอร์เซฟของเกม พร้อมซิ่งทันที!
+### Option A: Local Server Launcher (Recommended)
+1. Double-click **`start.bat`**.
+2. A lightweight local server starts automatically and opens `http://localhost:8080/` in your default browser.
+
+### Option B: Direct Offline File Open
+1. Simply double-click **`index.html`** in File Explorer.
+2. The bundled application runs immediately with full offline Angular and zero CORS restrictions.
 
 ---
 
-## 🛠️ โครงสร้างไฟล์ในโปรเจกต์ (Project Structure)
+## 📖 How to Edit Your Save
 
-```
+1. **Load Save**:
+   * Click **Choose File** under **Save file**.
+   * Select your career save (e.g., `MisterG`) or an `nfsu2-web` backup `.zip`.
+2. **Configure Profile & Slots**:
+   * Modify your Driver Name or Cash balance.
+   * Browse through **Car Slots 1 to 25**.
+   * If your save only has 5 slots, click **"+ Expand to 25 car slots"** to activate slots 6–25.
+3. **Tune & Customize**:
+   * Click **Tuning…** on any filled slot to install parts or click **MAX OUT**.
+   * Switch to the **DYNO** tab to customize torque curves and gear ratios.
+4. **Export**:
+   * Click **Download edited save** or **Download edited ZIP**.
+   * Place the downloaded files into your game's save folder and hit the streets!
+
+---
+
+## 📂 Project Structure
+
+```text
 Editor/
-├── index.html            # หน้าเว็บหลักพร้อมระบบ UI ทั้งหมด
-├── bundle.js             # สคริปต์แอปพลิเคชันที่ Bundle แล้ว (ทำงานออฟไลน์ได้)
-├── angular.min.js        # ไลบรารี AngularJS แบบ Local
-├── app.css               # สไตล์และธีมสีม่วงนีออน (Electric Purple HUD)
-├── editor.css            # เลย์เอาต์และส่วนประกอบต่าง ๆ ของตัว Editor
-├── car-donors.json       # ฐานข้อมูลบล็อกรถสำหรับเสกเข้าช่อง
-├── server.js             # เซิร์ฟเวอร์ Node.js สำหรับรันในเครื่อง
-├── start.bat             # ตัวเปิดเซิร์ฟเวอร์และหน้าเว็บใน 1 คลิก
-├── publish-github.bat    # ตัวช่วยอัปโหลดขึ้น GitHub Pages อัตโนมัติ
-├── src/                  # ซอร์สโค้ด TypeScript ฉบับเต็ม
-│   ├── model/            # โมดูลถอดรหัสไบต์เซฟ, ไดโน่, สล็อต 25 ช่อง
-│   ├── controller/       # คอนโทรลเลอร์สำหรับควบคุมหน้าเว็บ
-│   └── data/             # ข้อมูลอะไหล่และตารางปลดล็อค
-└── dist/                 # ไฟล์ที่คอมไพล์เสร็จสมบูรณ์พร้อมดีพลอย
+├── index.html            # Main web interface entry point
+├── bundle.js             # Self-contained bundled application logic
+├── angular.min.js        # Offline AngularJS framework
+├── app.css               # Electric Purple HUD stylesheet
+├── editor.css            # Base UI component styles
+├── car-donors.json       # Stock vehicle donor blocks
+├── server.js             # Lightweight Node.js local server
+├── start.bat             # 1-click launcher script
+├── publish-github.bat    # 1-click GitHub Pages publisher
+├── src/                  # Full TypeScript source code
+│   ├── model/            # Save binary layout, 25-slot garage, dyno, & checksums
+│   ├── controller/       # UI state management & event controllers
+│   └── data/             # Performance part tables & traffic definitions
+└── dist/                 # Production-ready static build
 ```
 
 ---
 
-## 🌐 อยากแชร์ให้เพื่อนใช้ ทำอย่างไร?
+## 🌐 Free Public Web Hosting
 
-- **Netlify Drop**: ลากโฟลเดอร์ `dist/` ไปวางที่ [app.netlify.com/drop](https://app.netlify.com/drop) ใช้งานได้ทันทีใน 1 นาที ฟรีตลอดชีพ
-- **GitHub Pages**: ดับเบิ้ลคลิกไฟล์ `publish-github.bat` เพื่อเชื่อมต่อกับ GitHub ของคุณและเปิดใช้งาน GitHub Pages อัตโนมัติ
+Want to share this tool with your friends online?
+
+* **Netlify Drop (Easiest — 1 minute)**:
+  1. Visit [app.netlify.com/drop](https://app.netlify.com/drop).
+  2. Drag and drop the **`dist/`** folder into the upload box.
+  3. Get a live, permanent HTTPS link instantly!
+* **GitHub Pages**:
+  1. Push this repository to GitHub (or run `publish-github.bat`).
+  2. In your repo settings, go to **Pages** &rarr; select branch **`main`** &rarr; root folder **`/`**.
+  3. Your editor goes live at `https://<username>.github.io/<repo>/`!
 
 ---
 
-<p align="center">
-  <sub>Need for Speed: Underground 2 is a trademark of Electronic Arts Inc. This tool is an independent open-source fan project.</sub>
-</p>
+## 📜 License & Disclaimers
+
+* Distributed under the **MIT License**.
+* *Need for Speed, Need for Speed: Underground 2*, and all associated vehicle trademarks are the intellectual property of Electronic Arts Inc. This software is an independent, non-commercial fan-made project.
