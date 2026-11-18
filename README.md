@@ -117,21 +117,6 @@ Editor/
 
 ---
 
-## 🌐 Free Public Web Hosting
-
-Want to share this tool with your friends online?
-
-* **Netlify Drop (Easiest — 1 minute)**:
-  1. Visit [app.netlify.com/drop](https://app.netlify.com/drop).
-  2. Drag and drop the **`dist/`** folder into the upload box.
-  3. Get a live, permanent HTTPS link instantly!
-* **GitHub Pages**:
-  1. Push this repository to GitHub (or run `publish-github.bat`).
-  2. In your repo settings, go to **Pages** &rarr; select branch **`main`** &rarr; root folder **`/`**.
-  3. Your editor goes live at `https://<username>.github.io/<repo>/`!
-
----
-
 ## 📜 License & Disclaimers
 
 * Distributed under the **MIT License**.
